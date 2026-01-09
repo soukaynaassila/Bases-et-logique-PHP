@@ -1,28 +1,20 @@
-# Mini PHP Application – Calculator
+====>Project Objective
+This project is a simple PHP quiz application that allows users to answer multiple-choice questions and get an immediate score.
+It is fully procedural PHP, without any database or object-oriented programming
 
-## Description
-A small procedural PHP application that performs basic arithmetic operations
-without using a database.
+====> Project Structure
+realisation-php/
+ ├── index.php     --> Main quiz page with questions
+ ├── result.php    --> Processes answers and calculates score
+ └── README.md
 
-## Features
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Input validation
-- Division by zero handling
+ ====>Description
+ The application contains an HTML form with multiple-choice questions.
+Users select their answers and submit the form.
+PHP processes the submitted answers, checks them against the correct answers, and calculates the score.
+The result is displayed immediately to the user with feedback messages.
 
-## Constraints Respected
-- No OOP (procedural PHP only)
-- No database
-- 100% local execution
-- PHP procedural approach
-
-## Technologies Used
-- PHP
-- HTML
-
-## Installation
-1. Copy the project folder into `htdocs` (XAMPP)
-2. Open your web browser
-3. Go to: http://localhost/mini_app_php/index.php
+===>Feedback
+Score = 3 → “Excellent ”
+Score = 2 → “Keep training!”
+Score = 0 → “Revision necessary”

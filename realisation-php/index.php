@@ -1,65 +1,32 @@
-<?php
-$result = "";
-$x = "";
-$y = "";
-
-if (isset($_POST["operation"])) {
-    $x = $_POST["num1"];
-    $y = $_POST["num2"];
-    $op = $_POST["operation"];
-
-    if (is_numeric($x) && is_numeric($y)) {
-        switch ($op) {
-            case "add":
-                $result = $x + $y;
-                break;
-            case "sub":
-                $result = $x - $y;
-                break;
-            case "mul":
-                $result = $x * $y;
-                break;
-            case "div":
-                if ($y == 0) {
-                    $result = "خطأ: القسمة على صفر";
-                } else {
-                    $result = $x / $y;
-                }
-                break;
-        }
-    } else {
-        $result = "دخل أرقام صحيحة";
-    }
-}
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mini Calculateur PHP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP-Quize</title>
 </head>
 <body>
+    <form action="result.php" method="post">
+    <h1>Quize</h1>
+    <p>Q1 : What does PHP stand for?</p>
+    <input type="radio" name="Q1" value="PHP: Hyperspeed Performance">PHP: Hyperspeed Performance<br>
+    <input type="radio" name="Q1" value="PHP: Hyperformat Programming">PHP: Hyperformat Programming<br>
+    <input type="radio" name="Q1" value="PHP: Hypertext Preprocessor">PHP: Hypertext Preprocessor<br>
 
-<h2>Calculateur PHP</h2>
+    <p>Q2 :Which statement is NOT true about PHP</p>
+    <input type="radio" name="Q2" value="PHP is a Front End code library">PHP is a Front End code library<br>
+    <input type="radio" name="Q2" value="PHP can generate dynamic page content">PHP can generate dynamic page content<br>
+    <input type="radio" name="Q2" value="PHP is free">PHP is free<br>
 
-<form method="post">
-    <input type="number" name="num1" placeholder="الرقم 1" value="<?php echo $x; ?>" required>
-    <input type="number" name="num2" placeholder="الرقم 2" value="<?php echo $y; ?>" required>
-
-    <br><br>
-
-    <button type="submit" name="operation" value="add">+</button>
-    <button type="submit" name="operation" value="sub">-</button>
-    <button type="submit" name="operation" value="mul">*</button>
-    <button type="submit" name="operation" value="div">/</button>
+<p>Q3 : What will be the output of the following code:
+<pre><code>if (5 == 5 && 3 < 7) {
+  echo "Hello";
+} else {
+  echo "Good bye";
+}</code></pre></p>
+<input type="radio" name="Q3" value="code1">True<br>
+<input type="radio" name="Q3" value="code2">False<br>
+<button type="submit">finich Quiz</button>
 </form>
-
-<br>
-
-<div>
-    <strong>النتيجة:</strong> <?php echo $result; ?>
-</div>
-
 </body>
 </html>

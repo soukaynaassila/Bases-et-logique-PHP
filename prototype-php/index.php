@@ -37,6 +37,14 @@ if (isset($_GET["operation"])) {
 <head>
     <meta charset="UTF-8">
     <title>PHP Calculator</title>
+    <style>
+body{
+    background-color:black;
+}
+#lab{
+   
+}
+    </style>
 </head>
 <body>
 
@@ -44,19 +52,19 @@ if (isset($_GET["operation"])) {
 
     <!-- Number 1 -->
     <div>
-        <label>Number 1</label>
+        <label class="lab">Number 1</label>
         <input type="number" name="num1" value="<?php echo $x; ?>">
     </div>
 
     <!-- Number 2 -->
     <div>
-        <label>Number 2</label>
+        <label  class="lab">Number 2</label>
         <input type="number" name="num2" value="<?php echo $y; ?>">
     </div>
 
     <!-- Result -->
     <div>
-        <label>Result</label>
+        <label  class="lab">Result</label>
         <input type="text" value="<?php echo $result; ?>" readonly>
     </div>
 
